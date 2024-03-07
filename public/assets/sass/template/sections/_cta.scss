@@ -1,0 +1,22 @@
+/* CTA Area 1 ---------------------------------- */
+.cta-area-1 {
+    .sec-title {
+        font-size: 80px;
+        line-height: 1.125;
+        @include ml {
+            font-size: 60px;
+        }
+        @include md {
+            font-size: 50px;
+        }
+        @include sm {
+            font-size: 40px;
+        }
+        @include xs {
+            font-size: 36px;
+        }
+        @include vxs {
+            font-size: 32px;
+        }
+    }
+}

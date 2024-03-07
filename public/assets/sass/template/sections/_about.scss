@@ -1,0 +1,127 @@
+/*about area 1***********************/
+.about-area-1 {
+    margin-top: 100px;
+    .about-img-1-1 {
+        width: 44%;
+        img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+    @include xxl {
+        .about-img-1-1 {
+            width: 42%;
+        }
+    }
+    @include md {
+        margin-top: 0;
+        .about-img-1-1 {
+            width: 100%;
+            top: -80px !important;
+            position: relative;
+        }
+    }
+}
+
+.marquee-wrap {
+    background: #1601AC;
+    padding: 31px 0;
+    .marquee__group {
+        .m-item {
+            margin-right: 25px;
+            display: inline;
+            a {
+                color: $smoke-color;
+                font-size: 36px;
+                font-weight: 600;
+                font-family: $title-font;
+                i {
+                    color: $theme-color;
+                    margin-right: 20px;
+                }
+                @include sm {
+                    font-size: 30px;
+                }
+                @include xs {
+                    font-size: 24px;
+                }
+                @include vxs {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+.about-counter-wrap {
+    display: flex;
+    gap: 120px;
+    .counter-card {
+        position: relative;
+        text-align: left;
+        &:after {
+            content: '';
+            position: absolute;
+            right: -60px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: $title-color;
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+    .counter-card_number {
+        font-size: 48px;
+        letter-spacing: -0.96px;
+        display: flex;
+        margin-bottom: 0;
+    }
+    .counter-card_title {
+        font-size: 18px;
+        font-weight: 400;
+        font-family: $body-font;
+        margin-bottom: -0.3em;
+    }
+}
+@include lg {
+    .about-counter-wrap {
+        gap: 100px;
+    }
+    .about-counter-wrap .counter-card:after {
+        right: -50px;
+    }
+}
+@include sm {
+    .about-counter-wrap .counter-card_number {
+        font-size: 40px;
+    }
+}
+@include xs {
+    .about-counter-wrap {
+        gap: 60px;
+    }
+    .about-counter-wrap .counter-card:after {
+        right: -30px;
+    }
+    .about-counter-wrap .counter-card_number {
+        font-size: 30px;
+    }
+    .about-counter-wrap .counter-card_title {
+        font-size: 16px;
+    }
+}
+@include vxs {
+    .about-counter-wrap {
+        display: block;
+        .counter-card {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

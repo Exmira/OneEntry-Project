@@ -1,0 +1,36 @@
+.pagination-wrap .pagination {
+	gap: 12px;
+	flex-wrap: wrap;
+	.page-link {
+		margin-left: 0;
+		padding: 0 0;
+		color: $title-color;
+		font-weight: 600;
+		font-family: $title-font;
+		font-size: 14px;
+		line-height: 1;
+		width: 60px;
+		height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 0;
+		border-radius: 50%;
+		background: $smoke-color;
+		&:hover {
+			color: $white-color;
+			background-color: $body-color;
+		}
+		&:focus {
+			color: $white-color;
+			background-color: $body-color;
+			outline: 0;
+			box-shadow: none;
+		}
+	}
+	.page-item.active .page-link {
+		color: $white-color;
+		background-color: $body-color;
+		border-color: $body-color;
+	}
+}

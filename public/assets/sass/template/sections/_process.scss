@@ -1,0 +1,50 @@
+.process-card {
+    .process-card-number {
+        font-size: 14px;
+        font-weight: 600;
+        font-family: $title-font;
+        color: $smoke-color;
+        text-transform: uppercase;
+        border-bottom: 2px solid $smoke-color;
+        padding-bottom: 22px;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            left: -4px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: $smoke-color;
+            bottom: 0;
+            transform: translate(0px, 50%);
+            border: 4px solid $title-color;
+        }
+    }
+    .process-card-title {
+        font-size: 24px;
+        font-weight: 600;
+        color: $smoke-color;
+        letter-spacing: -0.48px;
+        margin-top: 45px;
+    }
+    .process-card-text {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        color: $smoke-color;
+        max-width: 330px;
+        margin-bottom: -0.3em;
+    }
+}
+@include lg {
+    .process-card .process-card-text {
+        font-size: 16px;
+    }
+}
+@include md {
+    .process-card .process-card-text {
+        max-width: none;
+        font-size: 18px;
+    }
+}

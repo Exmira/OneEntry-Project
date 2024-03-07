@@ -1,17 +1,60 @@
 {
+
   "name": "my-app",
+
   "version": "0.1.0",
+
   "private": true,
+
   "scripts": {
+
     "dev": "next dev",
+
     "build": "next build",
+
     "start": "next start",
+
     "lint": "next lint"
+
   },
+
   "dependencies": {
+
+    "@popperjs/core": "^2.11.8",
+
+    "bootstrap": "^5.3.2",
+
+    "gsap": "^3.12.5",
+
+    "imagesloaded": "^5.0.0",
+
+    "isotope-layout": "^3.0.6",
+
+    "next": "14.1.0",
+
+    "node-fetch": "^3.3.2",
+
     "react": "^18",
+
     "react-dom": "^18",
-    "next": "14.1.1"
-    
+
+    "react-fast-marquee": "^1.6.3",
+
+    "react-modal-video": "^2.0.1",
+
+    "react-scroll-parallax": "^3.4.5",
+
+    "react-slick": "^0.30.0",
+
+    "react-tooltip": "^5.26.0",
+
+    "sass": "^1.71.1",
+
+    "slick-carousel": "^1.8.1",
+
+    "wowjs": "^1.1.3"
+
   }
+
 }
+

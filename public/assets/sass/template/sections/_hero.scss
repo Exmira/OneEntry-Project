@@ -1,0 +1,643 @@
+/* Hero Global ---------------------------------- */
+.hero-wrapper {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.hero-thumb-group {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  justify-content: flex-end;
+  margin-top: 80px;
+  img {
+    border-radius: 50%;
+    border: 3px solid $theme-color;
+    width: 60px;
+  }
+  .img2 {
+    margin-left: -24px;
+  }
+  .hero-counter {
+    height: 60px;
+    width: 60px;
+    line-height: 54px;
+    border-radius: 50%;
+    background: $title-color;
+    border: 3px solid $theme-color;
+    margin-left: -24px;
+    text-align: center;
+    color: $theme-color;
+    font-size: 14px;
+    font-family: $title-font;
+    flex: none;
+  }
+  p {
+    margin-bottom: 0;
+    max-width: 196px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    font-family: $title-font;
+    color: $title-color;
+    text-align: left;
+    margin-left: 16px;
+    text-transform: uppercase;
+    letter-spacing: -0.14px;
+  }
+}
+.hero-year-tag {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 254px;
+  img {
+    flex: none;
+  }
+  h6 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+}
+/* Hero 1 ---------------------------------- */
+.hero-subtitle {
+  font-size: 30px;
+  font-family: $title-font;
+  font-weight: 400;
+  color: $theme-color;
+  display: block;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.hero-title {
+  margin-bottom: 0;
+  color: $title-color;
+  font-weight: 600;
+  letter-spacing: -3px;
+  font-size: 120px;
+}
+.hero-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 0px;
+}
+.hero-style1 {
+  position: relative;
+  z-index: 6;
+  padding: 185px 0 80px;
+  .hero-title {
+    font-weight: 600;
+    letter-spacing: -3.6px;
+  }
+  .hero-text {
+    margin-top: 23px;
+  }
+  .btn-group {
+    margin-top: 30px;
+  }
+}
+@include ml {
+  .hero-title {
+    font-size: 100px;
+  }
+}
+@include xl {
+  .hero-title {
+    font-size: 90px;
+  }
+  .hero-text {
+    font-size: 16px;
+  }
+}
+@include lg {
+  .hero-style1 {
+    padding: 155px 0 80px;
+  }
+  .hero-title {
+    font-size: 80px;
+  }
+}
+@include md {
+  .hero-title {
+    font-size: 70px;
+  }
+  .hero-style1 .hero-year-tag {
+    margin-top: 40px;
+  }
+  .hero-style1 .hero-title {
+    letter-spacing: -1.2px;
+  }
+}
+@include sm {
+  .hero-style1 {
+    padding: 140px 0 80px;
+  }
+  .hero-title {
+    font-size: 56px;
+  }
+}
+@include xs {
+  .hero-style1 .hero-title {
+    letter-spacing: normal;
+  }
+  .hero-title {
+    font-size: 39px;
+    letter-spacing: normal;
+  }
+}
+@include vxs {
+  .hero-title {
+    font-size: 34px;
+  }
+}
+/* Hero 2 ---------------------------------- */
+.hero-2 {
+  background: $title-color;
+  .hero-2-thumb {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    height: 744px;
+    img {
+      height: 744px;
+      object-fit: cover;
+    }
+  }
+}
+.hero-style2 {
+  padding: 208px 0 72px;
+  .hero-title {
+    font-size: 100px;
+  }
+  .hero-text {
+    margin-top: 26px;
+    margin-bottom: 40px;
+  }
+  .btn {
+    margin-bottom: 43px;
+  }
+  .hero-contact-wrap {
+    color: $white-color;
+    font-family: $title-font;
+    max-width: 306px;
+    display: inline-block;
+    margin-top: 30px;
+    a {
+      color: $white-color;
+    }
+    &:not(:last-child) {
+      margin-right: 18px;
+    }
+  }
+}
+@include xxl {
+  .hero-2 .hero-2-thumb {
+    width: 900px;
+  }
+}
+@include ml {
+  .hero-style2 .hero-title {
+    font-size: 80px;
+  }
+  .hero-2 .hero-2-thumb {
+    height: 676px;
+    img {
+      height: 676px;
+    }
+  }
+}
+@include xl {
+  .hero-2 .hero-2-thumb {
+    width: 730px;
+  }
+}
+@include lg {
+  .hero-style2 .hero-title {
+    font-size: 70px;
+  }
+  .hero-2 .hero-2-thumb {
+    width: 620px;
+  }
+  .hero-2 .hero-2-thumb {
+    height: 667px;
+  }
+}
+@include md {
+  .hero-2 .hero-2-thumb {
+    height: 637px;
+    width: 400px;
+    img {
+      height: 637px;
+    }
+  }
+}
+@include sm {
+  .hero-style2 .hero-title {
+    font-size: 50px;
+  }
+  .hero-2 .hero-2-thumb {
+    height: 580px;
+    width: 320px;
+    img {
+      height: 580px;
+    }
+  }
+  .hero-style2 .hero-contact-wrap {
+    max-width: 246px;
+  }
+}
+@include xs {
+  .hero-2 .hero-2-thumb {
+    height: auto;
+    width: 100%;
+    position: inherit;
+    img {
+      height: auto;
+    }
+  }
+  .hero-style2 .hero-title {
+    font-size: 40px;
+  }
+  .hero-style2 {
+    padding: 80px 0 72px;
+  }
+  .hero-style2 .btn {
+    margin-bottom: 33px;
+  }
+}
+@include vxs {
+  .hero-style2 .hero-title {
+    font-size: 40px;
+  }
+}
+
+/* Hero 3 ---------------------------------- */
+.hero-3 {
+  background-image: -webkit-linear-gradient(to top, $smoke-color, $smoke-color);
+  background-image: linear-gradient(to top, $smoke-color, $smoke-color);
+  background-size: 100% calc(100% - 582px);
+  background-repeat: no-repeat;
+  @include md {
+    background: transparent;
+  }
+}
+.hero-style3 {
+  padding: 140px 0 130px;
+  .hero-title {
+    font-size: 100px;
+  }
+  .hero-3-thumb {
+    margin-top: 38px;
+    margin-bottom: 40px;
+  }
+  .hero-text {
+    margin-top: 22px;
+    margin-bottom: 0;
+  }
+}
+@include ml {
+  .hero-style3 .hero-title {
+    font-size: 80px;
+  }
+}
+@include lg {
+  .hero-style3 {
+    padding: 160px 0 70px;
+    .hero-title {
+      font-size: 70px;
+    }
+  }
+}
+@include sm {
+  .hero-style3 {
+    padding: 140px 0 70px;
+  }
+  .hero-style3 .hero-title {
+    font-size: 50px;
+  }
+  .hero-style3 .hero-3-thumb {
+    margin-top: 18px;
+    margin-bottom: 20px;
+  }
+}
+@include xs {
+  .hero-style3 .hero-title {
+    font-size: 40px;
+  }
+}
+@include vxs {
+  .hero-style3 .hero-title {
+    font-size: 40px;
+  }
+}
+/* Hero 4 ---------------------------------- */
+.hero-4 {
+  padding-bottom: 100px;
+  .hero-4-thumb {
+    width: 42%;
+    top: 210px;
+    bottom: 0px;
+    z-index: 1;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.hero-style4 {
+  padding-top: 210px;
+  padding-bottom: 80px;
+  .hero-title {
+    font-size: 100px;
+    margin-bottom: 24px;
+    line-height: 1.1em;
+  }
+  .hero-text {
+    margin-bottom: 36px;
+  }
+}
+@include ml {
+  .hero-style4 .hero-title {
+    font-size: 80px;
+  }
+}
+@include lg {
+  .hero-style4 .hero-title {
+    font-size: 70px;
+  }
+}
+@include md {
+  .hero-4 {
+    padding-bottom: 0px;
+    .hero-4-thumb {
+      width: 100%;
+      position: initial;
+      margin-top: 90px;
+    }
+  }
+  .hero-style4 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .hero-thumb-group {
+    justify-content: flex-start;
+    margin-top: 50px;
+  }
+}
+@include sm {
+  .hero-style4 .hero-title {
+    font-size: 56px;
+  }
+}
+@include xs {
+  .hero-style4 .hero-title {
+    font-size: 46px;
+  }
+}
+@include vxs {
+  .hero-style4 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+/* Hero 5 ---------------------------------- */
+.hero-5 {
+  .hero-overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+  .circle-btn {
+    margin-bottom: 140px;
+  }
+}
+.hero-style5 {
+  padding-top: 270px;
+  padding-bottom: 75px;
+  .hero-title {
+    font-size: 160px;
+    line-height: 1.0625em;
+    color: $white-color;
+    font-weight: 600;
+    letter-spacing: -4.8px;
+  }
+  .hero-text {
+    color: $smoke-color;
+    max-width: 416px;
+    line-height: 30px;
+    margin-top: 27px;
+  }
+  .hero-year-tag {
+    margin-top: 100px;
+    margin-left: auto;
+    h6 {
+      color: $white-color;
+      line-height: 24px;
+    }
+    img {
+      filter: grayscale(9) brightness(99);
+    }
+  }
+}
+@include xxl {
+  .hero-style5 {
+    padding-top: 317px;
+  }
+  .hero-style5 .hero-title {
+    font-size: 120px;
+    letter-spacing: normal;
+  }
+}
+@include ml {
+  .hero-style5 {
+    padding-top: 217px;
+  }
+  .hero-style5 .hero-title {
+    font-size: 100px;
+  }
+  .hero-style5 .hero-year-tag {
+    margin-top: 80px;
+  }
+}
+@include xl {
+  .hero-style5 .hero-title {
+    font-size: 90px;
+  }
+}
+@include ml {
+  .hero-style5 .hero-title {
+    font-size: 80px;
+  }
+}
+@include md {
+  .hero-style5 .hero-year-tag {
+    margin-left: 0;
+    margin-top: 60px;
+  }
+  .hero-5 .circle-btn {
+    margin-bottom: 120px;
+  }
+}
+@include sm {
+  .hero-5 .circle-btn {
+    margin-bottom: 100px;
+  }
+  .hero-style5 .hero-title {
+    font-size: 56px;
+    line-height: 66px;
+  }
+}
+@include xs {
+  .hero-style5 {
+    padding-top: 187px;
+    padding-bottom: 55px;
+  }
+  .hero-style5 .hero-year-tag {
+    margin-top: 40px;
+  }
+}
+@include vxs {
+  .hero-style5 .hero-title {
+    font-size: 46px;
+    line-height: 56px;
+  }
+}
+
+/* Hero 6 ---------------------------------- */
+.hero-style6 {
+  position: relative;
+  z-index: 6;
+  padding: 195px 0 0px;
+  margin-bottom: 140px;
+  .hero-text {
+    margin-top: 23px;
+  }
+  .circle-btn.style2 {
+    position: absolute;
+    bottom: 0px;
+    left: 300px;
+  }
+}
+@include xl {
+  .hero-style6 .circle-btn.style2 {
+    bottom: -30px;
+  }
+}
+@include lg {
+  .hero-style6 .circle-btn.style2 {
+    bottom: 0px;
+    left: 200px;
+  }
+}
+@include md {
+  .hero-style6 .circle-btn.style2 {
+    margin-top: 40px;
+    position: initial;
+  }
+  .hero-style6 {
+    padding: 155px 0 0px;
+    margin-bottom: 100px;
+  }
+}
+@include xs {
+  .hero-style6 .hero-title {
+    letter-spacing: normal;
+  }
+}
+/* Hero 7 ---------------------------------- */
+.hero-7 {
+  padding-bottom: 100px;
+  .hero-7-thumb {
+    margin-bottom: -100px;
+  }
+}
+.hero-style7 {
+  padding: 185px 0 70px;
+  .hero-title {
+    margin-bottom: 22px;
+  }
+  .hero-text {
+    max-width: 636px;
+    margin: 0 auto;
+  }
+}
+@include md {
+  .hero-style7 {
+    padding: 145px 0 70px;
+  }
+}
+@include sm {
+  .hero-style7 {
+    padding: 145px 0 60px;
+    .hero-title {
+      font-size: 50px;
+      letter-spacing: normal;
+    }
+  }
+}
+@include xs {
+  .hero-style7 {
+    padding: 145px 0 40px;
+    .hero-title {
+      font-size: 39px;
+    }
+  }
+}
+@include vxs {
+  .hero-style7 {
+    .hero-title {
+      font-size: 34px;
+    }
+  }
+}
+/* Hero 8 ---------------------------------- */
+.hero-style8 {
+  padding: 188px 0 140px;
+  .hero-subtitle {
+    font-size: 40px;
+    font-family: $body-font;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+  }
+  .hero-text {
+    margin-top: 60px;
+  }
+}
+@include ml {
+  .hero-style8 .hero-subtitle {
+    font-size: 36px;
+  }
+  .hero-style8 {
+    padding: 200px 0 140px;
+  }
+}
+@include md {
+  .hero-style8 {
+    max-width: 600px;
+    padding: 200px 0 80px;
+    .hero-subtitle {
+      font-size: 30px;
+    }
+    .hero-text {
+      margin-top: 30px;
+      max-width: 400px;
+    }
+  }
+}
+@include sm {
+  .hero-style8 {
+    max-width: 450px;
+    padding: 160px 0 80px;
+  }
+}
+@include xs {
+  .hero-style8 .hero-subtitle {
+    font-size: 24px;
+  }
+}

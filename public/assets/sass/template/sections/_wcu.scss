@@ -1,0 +1,33 @@
+/* Why choose area 1 ---------------------------------- */ 
+.why-area-1 {
+    margin-top: 100px;
+    p {
+        font-size: 18px;
+    }
+    .why-img-1-1 {
+        width: 44%;
+        img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+    @include xxl {
+        .why-img-1-1 {
+            width: 42%;
+        }
+    }
+    @include ml {
+        p {
+            font-size: 16px;
+        }
+    }
+    @include md {
+        margin-top: 0;
+        .why-img-1-1 {
+            width: 100%;
+            top: -80px !important;
+            position: relative;
+        }
+    }
+}

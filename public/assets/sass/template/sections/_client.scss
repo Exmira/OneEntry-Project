@@ -1,0 +1,114 @@
+.client-list-wrap {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 2px solid $title-color;
+    li {
+        border-top: 2px solid $title-color;
+        border-right: 2px solid $title-color;
+        a {
+            height: 148px;
+            line-height: 148px;
+            width: 212px;
+            display: inline-block;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            .link-effect {
+                height: 35px;
+            }
+            &:hover {
+                .link-effect .effect-1 {
+                    top: -100%;
+                }
+            }
+        }
+        &:last-child {
+            border-right: 0;
+        }
+        &:not(:nth-last-child(-n + 4)) {
+            border-top: 0;
+        }
+        &:nth-child(4) {
+            border-right: 0;
+        }
+    }
+}
+@include ml {
+    .client-list-wrap li a {
+        width: 182px;
+    }
+}
+@include md {
+    .client-list-wrap li a {
+        width: 160px;
+    }
+}
+@include sm {
+    .client-list-wrap li a {
+        width: 100px;
+    }
+    .client-list-wrap li a {
+        height: 128px;
+        line-height: 128px;
+    }
+}
+@include xs {
+    .client-list-wrap li a {
+        height: 98px;
+        line-height: 98px;
+        width: 80px;
+    }
+}
+@include vxs {
+    .client-list-wrap li a {
+        height: 78px;
+        line-height: 78px;
+        width: 60px;
+    }
+}
+/*client-area 2********/
+.client-area-2 {
+    .client-list-wrap {
+        grid-template-columns: repeat(6, 1fr);
+        li {
+            border-top: 0;
+            border-right: 2px solid $title-color;
+            &:last-child {
+                border-right: 0;
+            }
+        }
+    }
+}
+@include lg {
+    .client-area-2 .client-list-wrap {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .client-area-2 .client-list-wrap li {
+        border-top: 2px solid $title-color;
+        &:nth-child(3) {
+            border-right: 0;
+        }
+    }
+    .client-area-2 .client-list-wrap li:not(:nth-last-child(-n+3)) {
+        border-top: 0;
+    }
+}
+
+.client-area-3 {
+    .client-list-wrap {
+        border-color: $smoke-color;
+        li {
+            border-color: $smoke-color;
+            a {
+                img {
+                    filter: brightness(99) grayscale(99);
+                }
+            }
+        }
+    } 
+}

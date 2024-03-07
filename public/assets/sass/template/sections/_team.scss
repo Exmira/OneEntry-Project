@@ -1,0 +1,88 @@
+/* Team 1 ---------------------------------- */
+.team-card {
+    overflow: hidden;
+    position: relative;
+    &_img {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        width: 100%;
+        &:before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: -webkit-linear-gradient(180deg, rgba(10, 12, 0, 0.00) 50.47%, #0A0C00 100%);
+            background: linear-gradient(180deg, rgba(10, 12, 0, 0.00) 50.47%, #0A0C00 100%);
+            z-index: 1;
+        }
+        img {
+            transition: 0.4s;
+            width: 100%;
+            filter: grayscale(1);
+        }
+    }
+    .team-card_content {
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        padding: 0 28px 36px;
+        transition: 0.4s;
+        opacity: 0;
+        z-index: 1;
+    }
+    &_title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 7px;
+        a {
+            color: $white-color;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+    &_desig {
+        font-size: 18px;
+        font-weight: 400;
+        display: block;
+        color: $white-color;
+        margin-bottom: 0;
+    }
+    &:hover {
+        .team-card_content {
+            opacity: 1;
+            bottom: 0;
+        }
+        .team-card_img {
+            img {
+                transform: scale(1.05);
+                filter: grayscale(0);
+            }
+        }
+    }
+}
+@include ml {
+    .team-card_title {
+        font-size: 22px;
+    }
+}
+/* Team Details ---------------------------------- */
+.team-details-about-info {
+    .team-desig {
+        font-size: 24px;
+        font-weight: 400;
+        font-family: $body-font;
+        margin-bottom: 45px;
+    }
+    .about-contact-wrap {
+        .about-contact-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 6px;
+            a {
+                color: $title-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+/* Counter area ---------------------------------- */  
+.counter-divider {
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        left: -70px;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        border: 1px solid $title-color;
+    }
+    &:first-child {
+        &:after {
+            display: none;
+        }
+    }
+}
+.counter-card {
+    max-width: 320px;
+    &_number {
+        font-size: 60px;
+        font-weight: 600;
+        margin-bottom: 18px;
+    }
+    &_title {
+        font-weight: 600;
+    }
+    &_text {
+        font-size: 18px;
+        margin-bottom: -0.2em;
+    }
+}
+@include ml {
+    .counter-divider:after {
+        left: -30px;
+    }
+    .counter-card_number {
+        font-size: 45px;
+    }
+}
+@include lg {
+    .counter-divider:after {
+        display: none;
+    }
+    .counter-card_number {
+        margin-top: -0.28em;
+    }
+    .counter-card_title {
+        font-size: 22px;
+    }
+    .counter-card_text {
+        font-size: 16px;
+    }
+}
+@include sm {
+    .counter-card_number {
+        font-size: 40px;
+    }
+    .counter-card {
+        max-width: none;
+        text-align: center;
+    }
+}

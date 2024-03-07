@@ -1,0 +1,70 @@
+/* Video 1 ---------------------------------- */
+.jarallax {
+    width: 100%;
+    height: 800px;
+    @include xxl {
+        height: 600px;
+    }
+    @include sm {
+        height: 400px;
+    }
+}
+
+.jarallax-video-pause {
+    position: absolute;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    cursor: none;
+    z-index: 10000;
+    opacity: 0;
+}
+.cursor-follower.jarallax-btn {
+    height: 180px;
+    width: 180px;
+    background: $white-color;
+    transform: translate(-90px, -90px);
+    border: 0;
+    &:after {
+        content: 'PLAY VIDEO';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        line-height: 180px;
+        font-size: 14px;
+        font-weight: 600;
+        font-family: $title-font;
+    }
+}
+.video-wrap {
+    position: relative;
+    .play-btn {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        background: $white-color;
+        color: $title-color;
+        margin: -90px 0 0 -90px;
+        @include xs {
+            margin: 0 0;
+            transform: translate(-50%, -50%) !important;
+        }
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+}
+@include xs {
+    .cursor-follower.jarallax-btn {
+        height: 150px;
+        width: 150px;
+        &:after {
+            line-height: 150px;
+        }
+    }
+}

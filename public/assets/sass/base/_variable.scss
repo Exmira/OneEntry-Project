@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Unbounded:wght@400;500;600;700&display=swap");
+
+:root {
+  --theme-color: #e3ff04;
+  --title-color: #0a0c00;
+  --body-color: #0a0c00;
+  --smoke-color: #f6f5f3;
+  --smoke-color2: #fff4ef;
+  --smoke-color3: #f5f5f6;
+  --smoke-color4: #f4f4f4;
+  --smoke-color5: #f0f2f4;
+  --black-color: #202020;
+  --gray-color: #131312;
+  --white-color: #ffffff;
+  --light-color: #9fa2ad;
+  --yellow-color: #ffb539;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+  --border-color: #e3e3e3;
+  --title-font: "Unbounded", sans-serif;
+  --body-font: "Poppins", sans-serif;
+  --icon-font: "Font Awesome 5 Free";
+  --main-container: 1296px;
+  --container-gutters: 24px;
+  --section-space: 140px;
+  --section-space-mobile: 80px;
+  --section-title-space: 65px;
+  --ripple-ani-duration: 5s;
+}
+// Color Variation
+$theme-color: var(--theme-color);
+$title-color: var(--title-color);
+$body-color: var(--body-color);
+$smoke-color: var(--smoke-color);
+$smoke-color2: var(--smoke-color2);
+$smoke-color3: var(--smoke-color3);
+$smoke-color4: var(--smoke-color4);
+$smoke-color5: var(--smoke-color5);
+$white-color: var(--white-color);
+$light-color: var(--light-color);
+$black-color: var(--black-color);
+$gray-color: var(--gray-color);
+$yellow-color: var(--yellow-color);
+$success-color: var(--success-color);
+$error-color: var(--error-color);
+$border-color: var(--border-color);
+
+// Font Variation
+$icon-font: var(--icon-font);
+
+// Typography
+$title-font: var(--title-font);
+$body-font: var(--body-font);
+$body-font-size: 16px;
+$body-line-Height: 26px;
+$body-font-weight: 400;
+$p-line-Height: 1.75;
+
+// Device Variation
+$hd: 1921px; // Large Device Than 1920
+$xxl: 1500px; // Extra large Device
+$ml: 1399px; // Medium Large Device
+$xl: 1299px; // Medium Large Device
+$lg: 1199px; // Large Device (Laptop)
+$md: 991px; // Medium Device (Tablet)
+$sm: 767px; // Small Device
+$xs: 575px; // Extra Small Device
+$vxs: 375px; // Extra Small Device
+
+// Spacing Count with 5x
+$space-count: 10;
+
+// Section Space  For large Device
+$space: var(--section-space);
+$space-extra: calc(var(--section-space) - 30px);
+$space-extra2: calc(var(--section-space) - 40px);
+
+// Section Space On small Device
+$space-mobile: var(--section-space-mobile);
+$space-mobile-extra: calc(var(--section-space-mobile) - 30px);
+
+// BG Color Mapping
+$bgcolorMap: ();
+$bgcolorMap: map-merge(
+  (
+    "theme": $theme-color,
+    "theme2": $theme-color,
+    "smoke": $smoke-color,
+    "smoke2": $smoke-color2,
+    "smoke3": $smoke-color3,
+    "smoke4": $smoke-color4,
+    "smoke5": $smoke-color5,
+    "white": $white-color,
+    "black": $black-color,
+    "gray": $gray-color,
+    "title": $title-color,
+  ),
+  $bgcolorMap
+);
+
+// Overlay Color Mapping
+$overlaycolorMap: ();
+$overlaycolorMap: map-merge(
+  (
+    "theme": $theme-color,
+    "title": $title-color,
+    "white": $white-color,
+    "black": $black-color,
+    "overlay1": #131b23,
+  ),
+  $overlaycolorMap
+);
+
+// Text Color Mapping
+$textColorsMap: ();
+$textColorsMap: map-merge(
+  (
+    "theme": $theme-color,
+    "theme2": $theme-color,
+    "title": $title-color,
+    "body": $body-color,
+    "white": $white-color,
+    "smoke": $smoke-color,
+    "light": $light-color,
+    "yellow": $yellow-color,
+    "success": $success-color,
+    "error": $error-color,
+  ),
+  $textColorsMap
+);
+
+// Font Mapping
+$fontsMap: ();
+$fontsMap: map-merge(
+  (
+    "icon": $icon-font,
+    "title": $title-font,
+    "body": $body-font,
+  ),
+  $fontsMap
+);

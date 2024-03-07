@@ -1,0 +1,213 @@
+/* Testimonial 1 ---------------------------------- */
+.testimonial-area-1 {
+    margin-top: 100px;
+    .testimonial-img-1-1 {
+        width: 44%;
+        img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+    @include xxl {
+        .testimonial-img-1-1 {
+            width: 42%;
+        }
+    }
+    @include md {
+        margin-top: 0;
+        .testimonial-img-1-1 {
+            width: 100%;
+            top: -80px !important;
+            position: relative;
+        }
+    }
+}
+.testi-slider1 {
+    position: relative;
+    .slick-dots {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        text-align: end;
+        li {
+            margin-right: 12px;
+            &:last-child {
+                margin-right: 0;
+            }
+            button {
+                border: 1px solid $title-color;
+                height: 10px;
+                width: 10px;
+
+            }
+            &.slick-active button {
+                background: $title-color;
+            }
+        }
+    }
+}
+.testi-box {
+    &_text {
+        margin-bottom: 30px;
+        line-height: 38px;
+        font-size: 24px;
+        font-weight: 400;
+        margin-top: 28px;
+    }
+    &_profile {
+        .testi-box_name {
+            margin-bottom: 6px;
+            margin-top: -0.35em;
+            font-weight: 600;
+            font-family: $title-font;
+            color: $title-color;
+        }
+        .testi-box_desig {
+            font-size: 18px;
+            font-weight: 400;
+            display: block;
+            margin-bottom: -0.1em;
+        }
+    }
+    @include ml {
+        .testi-box_text {
+            font-size: 18px;
+            line-height: 34px;
+        }        
+    }
+    @include xl {
+        .testi-box_text {
+            font-size: 16px;
+            line-height: 30px;
+        }
+    }
+}
+/* Testimonial 2 ---------------------------------- */
+.testi-slider2 {
+    .slick-slide {
+        opacity: .1;
+        transition: 0.4s;
+        &.slick-current {
+            opacity: 1;
+        }
+    }
+}
+.testi-box.style2 {
+    text-align: center;
+    padding: 0 55px;
+    .quote-icon {
+        filter: brightness(99);
+    }
+    .testi-box_text {
+        font-size: 40px;
+        line-height: 54px;
+        letter-spacing: -0.8px;
+        color: $smoke-color;
+    }
+    .testi-box_profile {
+        margin-top: 52px;
+        .testi-box_name {
+            letter-spacing: -0.48px;
+            font-size: 24px;
+            color: $smoke-color;
+        }
+        .testi-box_desig {
+            font-size: 18px;
+            font-weight: 400;
+            color: $smoke-color;
+            margin-bottom: -0.1em;
+        }
+    }
+}
+@media (max-width: 1700px) {
+    .testi-box.style2 {
+        padding: 0 25px;
+    }
+    .testi-box.style2 .testi-box_text {
+        font-size: 30px;
+    }
+}
+@include xl {
+    .testi-box.style2 {
+        padding: 0 15px;
+    }
+    .testi-box.style2 .testi-box_text {
+        line-height: normal;
+    }
+    .testi-box.style2 .testi-box_text {
+        font-size: 27px;
+    }
+}
+@include lg {
+    .testi-box.style2 .testi-box_text {
+        font-size: 30px;
+    }
+}
+@include sm {
+    .testi-box.style2 .testi-box_text {
+        font-size: 27px;
+    }
+}
+@include xs {
+    .testi-box.style2 .testi-box_text {
+        font-size: 24px;
+    }
+}
+@include vxs {
+    .testi-box.style2 .testi-box_text {
+        font-size: 20px;
+    }
+    .testi-box.style2 .testi-box_profile {
+        margin-top: 42px;
+    }
+}
+/* Testimonial 3 ---------------------------------- */
+.testi-box.style3 {
+    background: $gray-color;
+    padding: 40px;
+    .quote-icon {
+        filter: brightness(99);
+    }
+    .testi-box_text {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 38px;
+        color: $smoke-color;
+        letter-spacing: -0.48px;
+        margin-bottom: 80px;
+    }
+    .testi-box_profile .testi-box_name {
+        color: $smoke-color;
+    }
+    .testi-box_profile .testi-box_desig {
+        color: $smoke-color;
+    }
+}
+@include lg {
+    .testi-box.style3 .testi-box_text {
+        font-size: 20px;
+        line-height: initial;
+    }
+}
+@include md {
+    .testi-box.style3 .testi-box_text {
+        font-size: 24px;
+        line-height: initial;
+    }
+}
+@include sm {
+    .testi-box.style3 .testi-box_text {
+        font-size: 20px;
+        line-height: initial;
+        margin-bottom: 50px;
+    }
+}
+@include xs {
+    .testi-box.style3 {
+        padding: 30px;
+        .testi-box_text {
+            font-size: 18px;
+        }
+    }
+}

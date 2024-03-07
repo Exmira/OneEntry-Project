@@ -1,0 +1,70 @@
+.pricing-card {
+    padding: 40px;
+    .pricing-card_title {
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: -0.48px;
+        margin-top: -0.2em;
+        margin-bottom: 12px;
+    }
+    .pricing-card_wrap {
+        margin-bottom: 19px;
+    }
+    .pricing-card_price {
+        font-size: 60px;
+        font-weight: 600;
+        letter-spacing: -1.8px;
+        .duration {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: -0.4px;
+        }
+    }
+    p {
+        font-size: 18px;
+        margin-bottom: 43px;
+        @include ml {
+            font-size: 16px;
+        }
+    }
+    .checklist {
+        margin-bottom: 42px;
+        li {
+            font-family: $title-font;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: -0.14px;
+            text-transform: uppercase;
+            i {
+                color: $title-color;
+            }
+        }
+    }
+    .btn {
+        width: 100%;
+    }
+}
+@include ml {
+    .pricing-card .pricing-card_price {
+        font-size: 50px;
+    }
+}
+@include lg {
+    .pricing-card .pricing-card_price {
+        font-size: 40px;
+    }
+    .pricing-card {
+        padding: 30px;
+        .btn {
+            padding: 21.5px 30px;
+        }
+    }
+    .pricing-card p {
+        font-size: 14px;
+    }
+}
+@include xs {
+    .pricing-card .pricing-card_price {
+        font-size: 30px;
+    }
+}

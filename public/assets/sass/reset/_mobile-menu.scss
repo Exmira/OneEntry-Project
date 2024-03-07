@@ -1,0 +1,209 @@
+.mobile-menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.60);
+  z-index: 999999;
+  width: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+  opacity: 0;
+  visibility: hidden;
+
+
+  // Mobile Menu Logo
+  .mobile-logo {
+    padding: 35px 0px 50px;
+    display: block;
+    text-align: start;
+    background-color: $white-color;
+    svg {
+      max-width: 185px;
+    }
+  }
+
+  // Menu Close Button
+  .menu-toggle {
+    border: 2px solid $title-color;
+    font-size: 22px;
+    position: absolute;
+    right: 20px;
+    top: 23px;
+    padding: 0;
+    line-height: 1;
+    width: 50px;
+    height: 50px;
+    line-height: 48px;
+    font-size: 14px;
+    z-index: 1;
+    color: $title-color;
+    background-color: transparent;
+    border-radius: 50%;
+
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+
+  .mobile-menu-area {
+    width: 100%;
+    max-width: 310px;
+    background-color: $white-color;
+    height: 100%;
+    position: relative;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+    z-index: 1;
+    padding: 0 20px;
+  }
+
+  &.body-visible {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+    .mobile-menu-area {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+    }
+  }
+  .sidebar-wrap {
+    margin-bottom: 23px;
+    h6 {
+      font-size: 14px;
+      font-weight: 600;
+      color: $title-color;
+      margin-bottom: 0;
+      line-height: 24px;
+    }
+    a {
+      color: $title-color;
+      &:hover {
+        color: $title-color;
+      }
+    }
+  }
+}
+
+
+// Mobile Menu
+.mobile-menu {
+  overflow-y: scroll;
+  max-height: calc(100vh - 200px);
+  padding-bottom: 25px;
+  margin-bottom: 40px;
+  text-align: left;
+  border-bottom: 2px solid $title-color;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  ul {
+    margin: 0;
+    padding: 5px 0;
+    li {
+      list-style-type: none;
+
+      a {
+        display: block;
+        position: relative;
+        padding: 8px 0;
+        line-height: 1.4;
+        font-size: 20px;
+        font-weight: 600;
+        font-family: $title-font;
+        color: $title-color;
+        letter-spacing: normal;
+        text-transform: capitalize;
+      }
+
+      &.active-class {
+        >a {
+          color: $title-color;
+
+          &:before {
+            background: $theme-color;
+            border-color: $theme-color;
+          }
+        }
+      }
+
+      ul {
+        li {
+          padding-left: 20px;
+          a {
+            font-weight: 400;
+            font-family: $body-font;
+            letter-spacing: normal;
+            text-transform: capitalize;
+            font-size: 16px;
+            padding: 6px 0;
+            .mean-expand-class:before {
+              font-size: 14px;
+            }
+          }
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+
+    .submenu-item-has-children {
+      >a {
+        .mean-expand-class {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          font-weight: 400;
+          font-size: 20px;
+          width: 100%;
+          height: 25px;
+          line-height: 25px;
+          margin-top: -12.5px;
+          display: inline-block;
+          text-align: end;
+          background-color: transparent;
+          color: $title-color;
+          border-radius: 50%;
+
+          &:before {
+            content: '\f107';
+            font-family: $icon-font;
+            font-weight: 700;
+          }
+        }
+      }
+
+      &.active-class {
+        >a {
+          .mean-expand-class:before {
+            content: '\f106';
+          }
+        }
+      }
+    }
+  }
+
+  >ul {
+    >li {
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 400px) {
+  .mobile-menu-wrapper .mobile-menu-area {
+    width: 100%;
+    max-width: 270px;
+  }
+}
